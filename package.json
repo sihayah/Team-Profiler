@@ -1,0 +1,26 @@
+{
+  "name": "team-profiler",
+  "version": "1.0.0",
+  "description": "team profile generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sihayah/Team-Profiler.git"
+  },
+  "author": "sihayah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sihayah/Team-Profiler/issues"
+  },
+  "homepage": "https://github.com/sihayah/Team-Profiler#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0",
+    "jest": "^27.4.3"
+  }
+}

@@ -1,0 +1,29 @@
+{
+    "employees": [
+        {
+            "role": "engineer",
+                "name": "Marge",
+                "id": "4",
+                "email": "marge@hopscotch.com",
+                "github": "mmmarge"
+
+        },
+        {
+            "role": "manager",
+                "name": "Nina",
+                "id": "2",
+                "email": "nina@hopscotch.com",
+                "github": "nnnina",
+                "officeNumber": "42"
+        },
+        {
+            "role": "intern",
+                "name": "Lois",
+                "id": "8",
+                "email": "lois@hopscotch.com",
+                "github": "lllois",
+                "school": "Bermuda School of Hopscotch"
+        }
+    ]
+}
+
