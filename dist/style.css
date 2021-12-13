@@ -1,0 +1,26 @@
+h1 {
+    font-size: 5vh;
+    background-color: #ae2012;
+    color: #94d2bd;
+    border: 3px solid #9b2226;
+    border-radius: 2vh;
+}
+span {
+    font-size: 2em;
+}
+.card {
+    min-width: 225px;
+}
+.card-header {
+    text-align: left;
+    padding-left: 6vh;
+    color: #94d2bd;
+    background-color: #005f73;
+
+}
+.card-holder {
+    justify-content: center;
+}
+.list-group {
+    background-color: #fff7e0;
+}

@@ -12,7 +12,7 @@ const employeeJson = require('./data/employees.json')
 const employeeArr = employeeJson.employees
 const writeFile = (fileName, fileContent) => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./index.html', fileContent, err => {
+        fs.writeFile('./dist/index.html', fileContent, err => {
             if (err) {
                 reject(err)
                 return
@@ -56,9 +56,8 @@ getEngineer = () => {
     console.log('adding engineer...')
     getEmployeeData().then(({name, id, email}) => {
         this.employee = new Engineer(name, id, email)
-        this.employee.gitHub = this.employee.getGithub().then(({github}) => {
-            this.employee.gitHub = github
-            console.log(this.employee);
+        this.employee.github = this.employee.getGithub().then(({github}) => {
+            this.employee.github = github
             newTeam.push(this.employee);
             addEmployee()
         })
@@ -72,7 +71,6 @@ getIntern = () => {
         this.employee = new Intern(name, id, email)
         this.employee.school = this.employee.getSchool().then(({school}) => {
             this.employee.school = school
-            console.log(this.employee);
             newTeam.push(this.employee);
             addEmployee()
         })
@@ -85,8 +83,8 @@ chooseRole = () => {
             {
                 type: 'list',
                 name: 'role',
-                message: 'Would you like to add an engineer or an intern?,',
-                choices: ['engineer', 'intern'],
+                message: 'Would you like to add an engineer or an intern?',
+                choices: ['Engineer', 'Intern'],
                validate: (employeeTypeInput) => {
                     if (employeeTypeInput) {
                         return true
@@ -100,10 +98,10 @@ chooseRole = () => {
         .then(answer => {
             const chosenRole = answer.role
             switch (chosenRole) {
-                case 'engineer':
+                case 'Engineer':
                     getEngineer()
                     break
-                case 'intern':
+                case 'Intern':
                     getIntern()
                     break
             }
